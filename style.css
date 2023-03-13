@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+body{
+    background-color: rgb(10, 15, 28);
+    color: #ffffff;
+}
+
+.header{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    width: 550px;
+    height: 100px;
+    margin: 40px auto;
+    text-align: center;
+}
+
+button{
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+    padding: 15px 50px;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    color: #ffffff;
+    background-color: transparent
+}
+
+button::before,
+button::after{
+    content:'';
+    position: absolute;
+    background-color: #ffffff;
+    top: 0;
+    left: 0;
+}
+
+button::before{
+    width: 3px;
+    height: 0;
+    transition: height .3s;
+}
+
+button::after{
+    width: 0;
+    height: 3px;
+    transition: width .3s;
+}
+
+button span{
+    position: absolute;
+    background-color: #ffffff;
+
+}
+
+button .f{
+    width: 0;
+    transition: width .3s;
+    top: 0;
+    right: 0;
+    height: 3px;
+}
+
+button .s{
+    width: 3px;
+    height: 0;
+    transition: height .3s;
+    top: 0;
+    right: 0;
+}
+
+
+
+button .th{
+    height: 3px;
+    width: 0;
+    bottom: 0;
+    position: absolute;
+    right: 0;
+    transition: width .3s;
+}
+
+button .fo{
+    width: 3px;
+    height: 0;
+    transition: height .3s;
+    bottom: 0;
+    right: 0;
+}
+
+button .fi{
+    width: 3px;
+    height: 0;
+    transition: height .3s;
+    bottom: 0;
+    left: 0;
+}
+
+button .si{
+    width: 0;
+    transition: width .3s;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+}
+
+button:hover .f,
+button:hover .th,
+button:hover .si
+{
+    width: 10%;
+}
+
+button:hover .s ,
+button:hover .fo,
+button:hover .fi
+{
+    height: 30%;
+}
+
+button:hover::after{
+    width: 10%;
+}
+
+button:hover::before{
+    height: 30%;
+}
+
+.photos{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
